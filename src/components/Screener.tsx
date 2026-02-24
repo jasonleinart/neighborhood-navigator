@@ -40,11 +40,13 @@ const INITIAL_INPUT: ResidentInput = {
 export default function Screener({ citySlug }: { citySlug: string }) {
   const searchParams = useSearchParams();
   const cityData = getCityData(citySlug);
+  const zipFromUrl = searchParams.get("zip") || "";
 
   const [step, setStep] = useState(1);
+  const [editingZip, setEditingZip] = useState(!zipFromUrl);
   const [input, setInput] = useState<ResidentInput>({
     ...INITIAL_INPUT,
-    zip: searchParams.get("zip") || "",
+    zip: zipFromUrl,
   });
   const [results, setResults] = useState<MatchResult[] | null>(null);
 
@@ -111,28 +113,43 @@ export default function Screener({ citySlug }: { citySlug: string }) {
             <label htmlFor="zip" className="block text-sm font-medium text-gray-700">
               ZIP code
             </label>
-            <input
-              id="zip"
-              type="text"
-              inputMode="numeric"
-              maxLength={5}
-              value={input.zip}
-              onChange={(e) => update("zip", e.target.value.replace(/\D/g, ""))}
-              className={`mt-1 w-32 rounded-lg border px-3 py-2 focus:ring-2 focus:outline-none ${
-                input.zip.length === 5 && !zipInCity
-                  ? "border-warning focus:border-warning focus:ring-warning-light"
-                  : "border-gray-300 focus:border-primary focus:ring-primary-light"
-              }`}
-            />
-            {input.zip.length === 5 && !zipInCity && (
-              <p className="mt-1 text-sm text-warning">
-                This ZIP code isn't in our {cityData.meta.name} database. Results may be limited for ZIP-specific programs.
-              </p>
-            )}
-            {input.zip.length > 0 && input.zip.length < 5 && (
-              <p className="mt-1 text-sm text-muted">
-                Enter a 5-digit ZIP code
-              </p>
+            {!editingZip && input.zip.length === 5 ? (
+              <div className="mt-1 flex items-center gap-2">
+                <span className="text-lg font-medium">{input.zip}</span>
+                <button
+                  type="button"
+                  onClick={() => setEditingZip(true)}
+                  className="text-sm text-primary underline"
+                >
+                  Change
+                </button>
+              </div>
+            ) : (
+              <>
+                <input
+                  id="zip"
+                  type="text"
+                  inputMode="numeric"
+                  maxLength={5}
+                  value={input.zip}
+                  onChange={(e) => update("zip", e.target.value.replace(/\D/g, ""))}
+                  className={`mt-1 w-32 rounded-lg border px-3 py-2 focus:ring-2 focus:outline-none ${
+                    input.zip.length === 5 && !zipInCity
+                      ? "border-warning focus:border-warning focus:ring-warning-light"
+                      : "border-gray-300 focus:border-primary focus:ring-primary-light"
+                  }`}
+                />
+                {input.zip.length === 5 && !zipInCity && (
+                  <p className="mt-1 text-sm text-warning">
+                    This ZIP code isn&apos;t in our {cityData.meta.name} database. Results may be limited for ZIP-specific programs.
+                  </p>
+                )}
+                {input.zip.length > 0 && input.zip.length < 5 && (
+                  <p className="mt-1 text-sm text-muted">
+                    Enter a 5-digit ZIP code
+                  </p>
+                )}
+              </>
             )}
           </fieldset>
 

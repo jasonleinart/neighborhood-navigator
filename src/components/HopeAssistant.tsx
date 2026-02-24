@@ -544,32 +544,68 @@ export default function HopeAssistant({ hopeData, citySlug }: HopeAssistantProps
           <div>
             <h3 className="text-lg font-semibold">Need Help With Your Application?</h3>
             <p className="mt-1 text-sm text-muted">
-              These organizations can help you fill out and submit your HOPE application for free.
+              These Detroit Housing Network partners can help you fill out and submit your HOPE application for free.
             </p>
-            <div className="mt-3 space-y-3">
-              {hopeData.assistance_partners.map((partner, i) => (
-                <div key={i} className="rounded-lg border border-gray-200 bg-white p-3">
-                  <p className="text-sm font-medium">{partner.name}</p>
-                  <p className="mt-0.5 text-sm text-muted">{partner.services}</p>
-                  <div className="mt-1 flex flex-wrap gap-3 text-sm">
-                    <a
-                      href={`tel:${partner.phone.replace(/\D/g, "")}`}
-                      className="font-medium text-primary underline"
-                    >
-                      {partner.phone}
-                    </a>
-                    <a
-                      href={partner.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium text-primary underline"
-                    >
-                      Website
-                    </a>
+
+            {/* Helpline */}
+            <div className="mt-3 rounded-lg border-2 border-primary bg-primary/5 p-4">
+              <p className="text-sm font-semibold text-primary">{hopeData.helpline.name}</p>
+              <p className="mt-0.5 text-sm text-muted">{hopeData.helpline.note}</p>
+              <div className="mt-1 flex flex-wrap gap-3 text-sm">
+                <a
+                  href={`tel:${hopeData.helpline.phone.replace(/\D/g, "")}`}
+                  className="text-lg font-bold text-primary underline"
+                >
+                  {hopeData.helpline.phone}
+                </a>
+                <a
+                  href={hopeData.helpline.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-primary underline"
+                >
+                  Website
+                </a>
+              </div>
+            </div>
+
+            {/* Partners grouped by zone */}
+            {(["east", "west", "south"] as const).map((zone) => {
+              const partners = hopeData.assistance_partners.filter((p) => p.zone === zone);
+              if (partners.length === 0) return null;
+              const zoneLabels = { east: "East Side", west: "West Side", south: "Southwest" };
+              return (
+                <div key={zone} className="mt-4">
+                  <h4 className="text-sm font-semibold uppercase tracking-wide text-muted">
+                    {zoneLabels[zone]}
+                  </h4>
+                  <div className="mt-2 space-y-2">
+                    {partners.map((partner, i) => (
+                      <div key={i} className="rounded-lg border border-gray-200 bg-white p-3">
+                        <p className="text-sm font-medium">{partner.name}</p>
+                        <p className="mt-0.5 text-sm text-muted">{partner.services}</p>
+                        <div className="mt-1 flex flex-wrap gap-3 text-sm">
+                          <a
+                            href={`tel:${partner.phone.replace(/\D/g, "")}`}
+                            className="font-medium text-primary underline"
+                          >
+                            {partner.phone}
+                          </a>
+                          <a
+                            href={partner.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-medium text-primary underline"
+                          >
+                            Website
+                          </a>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
 
           {/* Go to Packet button */}

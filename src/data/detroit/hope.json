@@ -41,8 +41,8 @@
     {
       "method": "E-HOPE Online Portal",
       "type": "online",
-      "url": "https://detroitmi.gov/webapp/e-hope",
-      "description": "Submit your application and upload documents online"
+      "url": "https://detroitmi.gov/government/mayors-office/chief-financial-officer/homeowners-property-exemption-hope",
+      "description": "Visit the HOPE page for the current year's online application link"
     },
     {
       "method": "In Person",
@@ -96,29 +96,109 @@
   },
   "assistance_partners": [
     {
-      "name": "United Community Housing Coalition (UCHC)",
-      "phone": "(313) 963-3310",
-      "url": "https://www.uchcdetroit.org",
-      "services": "Free help with HOPE applications, tax foreclosure prevention, housing counseling"
+      "name": "Alger Theater",
+      "phone": "(313) 343-9087",
+      "url": "https://www.algertheater.org/hope",
+      "services": "HOPE application assistance for east side residents",
+      "zone": "east"
     },
     {
-      "name": "Wayne Metro Community Action Agency",
-      "phone": "(313) 388-9799",
-      "url": "https://www.waynemetro.org",
-      "services": "HOPE application assistance, financial counseling, utility assistance"
+      "name": "Eastside Community Network",
+      "phone": "(313) 571-2800",
+      "url": "https://www.ecn-detroit.org",
+      "services": "Community development, HOPE counseling partner",
+      "zone": "east"
     },
     {
-      "name": "Michigan Legal Services",
-      "phone": "(313) 964-4130",
-      "url": "https://www.michiganlegalservices.org",
-      "services": "Free legal help for property tax issues, foreclosure defense"
+      "name": "Jefferson East, Inc.",
+      "phone": "(313) 331-7939",
+      "url": "https://www.jeffersoneast.org/housing",
+      "services": "HOPE application assistance, housing counseling, foreclosure prevention",
+      "zone": "east"
+    },
+    {
+      "name": "MACC Development",
+      "phone": "(313) 732-9302",
+      "url": "https://www.maccdevelopment.com",
+      "services": "Community development, HOPE counseling partner",
+      "zone": "east"
+    },
+    {
+      "name": "Osborn Neighborhood Alliance",
+      "phone": "(313) 344-6190",
+      "url": "https://liveinosborn1.org",
+      "services": "Neighborhood support, HOPE counseling partner",
+      "zone": "east"
+    },
+    {
+      "name": "U-SNAP-BAC",
+      "phone": "(313) 640-1100",
+      "url": "https://www.usnapbac.org/programs-and-services/",
+      "services": "HUD-approved housing counseling, HOPE application assistance",
+      "zone": "east"
     },
     {
       "name": "Accounting Aid Society",
       "phone": "(313) 556-1920",
       "url": "https://www.accountingaidsociety.org",
-      "services": "Free tax preparation, HOPE application support for qualifying residents"
+      "services": "Free tax preparation, HOPE application support",
+      "zone": "west"
+    },
+    {
+      "name": "Central Detroit Christian",
+      "phone": "(313) 873-0064",
+      "url": "https://www.centraldetroitchristian.org",
+      "services": "Housing assistance, HOPE counseling partner",
+      "zone": "west"
+    },
+    {
+      "name": "Cody Rouge Community Action Alliance",
+      "phone": "(313) 397-9280",
+      "url": "https://www.codyrouge.org",
+      "services": "Community development, HOPE counseling partner",
+      "zone": "west"
+    },
+    {
+      "name": "Greater Quinn AME",
+      "phone": "(313) 867-8380",
+      "url": "http://www.greaterquinname.org",
+      "services": "HOPE application assistance location",
+      "zone": "west"
+    },
+    {
+      "name": "United Community Housing Coalition (UCHC)",
+      "phone": "(313) 963-3310",
+      "url": "https://www.uchcdetroit.org",
+      "services": "Free help with HOPE applications, tax foreclosure prevention, housing counseling",
+      "zone": "west"
+    },
+    {
+      "name": "Wayne Metro Community Action Agency",
+      "phone": "(313) 388-9799",
+      "url": "https://www.waynemetro.org",
+      "services": "HOPE application assistance, financial counseling, utility assistance",
+      "zone": "west"
+    },
+    {
+      "name": "Bridging Communities",
+      "phone": "(313) 361-6377",
+      "url": "https://bridgingcommunities.org",
+      "services": "HOPE counseling, neighborhood support for Southwest Detroit",
+      "zone": "south"
+    },
+    {
+      "name": "MiSide Wealth",
+      "phone": "(313) 841-9641",
+      "url": "https://miside.org/miside-wealth",
+      "services": "Homeownership services, foreclosure prevention, HOPE counseling partner",
+      "zone": "south"
     }
   ],
+  "helpline": {
+    "name": "Detroit Housing Network",
+    "phone": "(866) 313-2520",
+    "url": "https://detroithousingnetwork.org/hope/",
+    "note": "Call to schedule a HOPE counseling appointment with a partner near you"
+  },
   "info_url": "https://detroitmi.gov/government/mayors-office/chief-financial-officer/homeowners-property-exemption-hope"
 }

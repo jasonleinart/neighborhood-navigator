@@ -32,6 +32,14 @@ export interface AssistancePartner {
   phone: string;
   url: string;
   services: string;
+  zone: "east" | "west" | "south" | "citywide";
+}
+
+export interface HelplineInfo {
+  name: string;
+  phone: string;
+  url: string;
+  note: string;
 }
 
 export interface HopeDocRequirements {
@@ -55,6 +63,7 @@ export interface HopeData {
   filing_methods: FilingMethod[];
   required_documents: HopeDocRequirements;
   assistance_partners: AssistancePartner[];
+  helpline: HelplineInfo;
   info_url: string;
 }
 
