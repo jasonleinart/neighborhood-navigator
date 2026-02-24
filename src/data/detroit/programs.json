@@ -1,0 +1,883 @@
+[
+  {
+    "id": "detroit-hope-poverty-tax-exemption",
+    "name": "HOPE (Homeowners Property Exemption)",
+    "agency": "City of Detroit Office of the Assessor / Board of Review",
+    "category": "tax-relief",
+    "description": "If you own and live in your home in Detroit and have a low income, you may qualify to have some or all of your property taxes waived for the year. The exemption ranges from 10% to 100% depending on your household income and size. You must reapply every year.",
+    "covers": "Current-year City of Detroit property taxes — partial or full exemption",
+    "max_benefit": "100% of annual property tax bill (average Detroit home saves $1,500-$3,000/year)",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" },
+        { "type": "income_below", "threshold_type": "fixed", "amount": 42114, "note": "10% exemption for 1-person household; 100% exemption at $21,597. Limits increase with household size." }
+      ],
+      "bonus": [
+        { "type": "is_senior", "note": "Seniors may have additional documentation options if not filing tax returns" }
+      ]
+    },
+    "required_docs": [
+      "Michigan Department of Treasury Form 5737 (Application for Poverty Exemption)",
+      "Michigan Department of Treasury Form 5739 (Affirmation of Ownership and Occupancy)",
+      "Registered proof of ownership (deed or land contract)",
+      "Government-issued photo ID for all household members 18+",
+      "2025 federal and state tax returns for all adults (or signed affidavit if non-filer)",
+      "Proof of income for all household members",
+      "Proof of residency for minors in household"
+    ],
+    "how_to_apply": {
+      "method": "Online or in-person",
+      "url": "https://detroitmi.gov/government/mayors-office/chief-financial-officer/homeowners-property-exemption-hope",
+      "address": "Coleman A. Young Municipal Center, 2 Woodward Avenue, Suite 804, Detroit, MI 48226",
+      "phone": "(313) 224-3035",
+      "hours": "Monday-Thursday, 8:00 AM - 4:30 PM",
+      "notes": "Deadline for 2026 applications: November 6, 2026 by 4:30 PM. Board of Review meets in March, July, and December. E-HOPE online portal available. Community partners can help with applications — schedule an appointment through the city website."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-principal-residence-exemption",
+    "name": "Principal Residence Exemption (PRE)",
+    "agency": "Michigan Department of Treasury / City of Detroit Office of the Assessor",
+    "category": "tax-relief",
+    "description": "If you own and live in your home as your primary residence, you can exempt it from the local school operating millage — up to 18 mills of property tax. This is not income-based; any homeowner who lives in their home qualifies. You only need to file once unless you move.",
+    "covers": "Exemption from local school operating millage (up to 18 mills) on your property tax bill",
+    "max_benefit": "Saves roughly $1,000-$2,500/year depending on taxable value (18 mills off your tax rate)",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Principal Residence Exemption Affidavit (Form 2368)",
+      "Government-issued photo ID"
+    ],
+    "how_to_apply": {
+      "method": "In-person or mail",
+      "url": "https://detroitmi.gov/departments/office-chief-financial-officer/ocfo-divisions/office-assessor/principal-residence-exemption-pre-audit",
+      "address": "Coleman A. Young Municipal Center, 2 Woodward Avenue, Suite 804, Detroit, MI 48226",
+      "phone": "(313) 224-3035",
+      "hours": "Monday-Thursday, 8:00 AM - 4:30 PM",
+      "notes": "File by June 1 for summer tax bill or November 1 for winter tax bill. Only needs to be filed once — stays in effect until you move or change primary residence. Form 2368 available from the Assessor's office or michigan.gov/treasury."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-liheap",
+    "name": "LIHEAP Heating Assistance",
+    "agency": "Wayne Metropolitan Community Action Agency (via Michigan DHHS)",
+    "category": "utility",
+    "description": "A federal program that helps pay your heating bills during the winter. If your household income is low enough, you can get a one-time payment sent directly to your energy company. The amount depends on your income, household size, and heating costs. Crisis assistance is also available year-round if your heat is shut off or you're about to run out of fuel.",
+    "covers": "Direct payment to your heating company (gas or electric) for winter heating costs. Separate crisis assistance for emergency heating situations.",
+    "max_benefit": "$1-$2,205 for heating assistance; up to $800 for crisis assistance",
+    "eligibility": {
+      "required": [
+        { "type": "income_below", "threshold_type": "fpl", "percentage": 110, "note": "110% FPL for heating assistance; 150% FPL for crisis assistance" }
+      ],
+      "bonus": [
+        { "type": "is_senior", "note": "Seniors 60+ receive priority processing" }
+      ]
+    },
+    "required_docs": [
+      "Government-issued photo ID",
+      "Social Security cards for all household members",
+      "Proof of income for all household members (pay stubs, benefit letters, tax returns)",
+      "Current heating bill or utility account number",
+      "Proof of address (lease or utility bill)"
+    ],
+    "how_to_apply": {
+      "method": "Online or in-person",
+      "url": "https://www.mibridges.michigan.gov/access/",
+      "address": "Wayne Metro CAA, 7310 Woodward Ave, Suite 800, Detroit, MI 48202",
+      "phone": "(313) 388-9799",
+      "hours": "Monday-Friday, 8:30 AM - 5:00 PM",
+      "notes": "Heating assistance available January 1 through September 30. Crisis assistance is year-round. Apply as early as possible — funding runs out. No asset limit. You can also apply through MI Bridges online portal or call 211."
+    },
+    "funding_status": "seasonal",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-critical-home-repair",
+    "name": "Critical Home Repair Program",
+    "agency": "City of Detroit Housing and Revitalization Department",
+    "category": "home-repair",
+    "description": "Free repairs for Detroit homeowners whose homes have serious safety problems — like a leaking roof, broken furnace, dangerous electrical wiring, or severe plumbing issues. Priority goes to households with children, seniors 62+, or people with disabilities. The program addresses the most urgent repairs first.",
+    "covers": "Severe plumbing issues, actively leaking roofs, furnace or boiler failure, electrical hazards, and accessibility repairs to bathrooms and entrances",
+    "max_benefit": "Varies by repair scope; program covers full cost of approved critical repairs",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" },
+        { "type": "income_below", "threshold_type": "ami", "percentage": 80, "note": "Income limits based on HUD Area Median Income; contact HRD for current limits by household size" }
+      ],
+      "bonus": [
+        { "type": "is_senior", "note": "Seniors 62+ receive priority for program enrollment" },
+        { "type": "has_issue", "value": "heating_insulation", "note": "Furnace/boiler failure treated as highest priority" }
+      ]
+    },
+    "required_docs": [
+      "Proof of homeownership (deed or land contract)",
+      "Proof of income for all household members",
+      "Government-issued photo ID",
+      "Current property tax bill or payment plan documentation",
+      "Documentation of disability (if applicable)"
+    ],
+    "how_to_apply": {
+      "method": "Online",
+      "url": "https://detroitmi.gov/departments/housing-and-revitalization-department/homeowners/critical-home-repair-program",
+      "address": "Coleman A. Young Municipal Center, 2 Woodward Avenue, Suite 908, Detroit, MI 48226",
+      "phone": "(313) 224-6380",
+      "hours": "Weekdays, 8:30 AM - 4:30 PM",
+      "notes": "Applications open citywide in winter 2026 through the Neighborly online system. Must be current on property taxes or in a payment plan. Household must include a child under 18, senior 62+, or person with a documented disability. Same application covers LeadSafe Housing program. Sign up for notifications at the city website."
+    },
+    "funding_status": "seasonal",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-weatherization",
+    "name": "Weatherization Assistance Program (WAP)",
+    "agency": "Wayne Metropolitan Community Action Agency",
+    "category": "utility",
+    "description": "Free home energy improvements that permanently lower your heating and cooling bills. A technician inspects your home and installs insulation, seals air leaks, and adds ventilation. Most households save $250-$450 per year on energy bills after weatherization. This is not an emergency repair program — your home needs to be in reasonable condition before they can do the work.",
+    "covers": "Wall insulation, attic insulation and ventilation, foundation insulation, air leak sealing, dryer venting, smoke and carbon monoxide detectors",
+    "max_benefit": "$250-$450/year in energy savings (services valued at $5,000-$10,000)",
+    "eligibility": {
+      "required": [
+        { "type": "income_below", "threshold_type": "fpl", "percentage": 200, "note": "Auto-eligible if receiving TANF, SNAP, SER, or SSI" }
+      ],
+      "bonus": [
+        { "type": "is_senior", "note": "Seniors and households with young children receive priority" }
+      ]
+    },
+    "required_docs": [
+      "Government-issued photo ID (state, federal, or passport)",
+      "Current water bill",
+      "30 days of income documentation (pay stubs, benefit statements)",
+      "Proof of homeownership or landlord permission letter (if renting)",
+      "Lease showing water bill responsibility (if renting)"
+    ],
+    "how_to_apply": {
+      "method": "Online or phone",
+      "url": "https://www.waynemetro.org/weatherization/",
+      "address": "Wayne Metro CAA, 7310 Woodward Ave, Suite 800, Detroit, MI 48202",
+      "phone": "(313) 388-9799",
+      "hours": "Monday-Friday, 8:30 AM - 5:00 PM",
+      "notes": "Process takes several months from application to completion. Home must not have been weatherized in the past 15 years. Home must have a functional roof, no mold, no active knob-and-tube wiring, no asbestos, and no significant missing drywall or windows. If your home has these issues, you may need to fix them first through a home repair program."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-dte-lsp",
+    "name": "DTE Low-Income Self-Sufficiency Plan (LSP)",
+    "agency": "DTE Energy",
+    "category": "utility",
+    "description": "A 24-month program for DTE customers who are behind on their energy bills. You get affordable, fixed monthly payments based on your income and energy use, protection from shutoffs, no late fees, and up to $3,000 of your past-due balance forgiven over the course of the program.",
+    "covers": "Fixed monthly DTE gas and electric payments, shutoff protection, and past-due balance forgiveness",
+    "max_benefit": "Up to $3,000 in past-due balance forgiveness ($600 at enrollment, $600 after year one, up to $1,800 at completion)",
+    "eligibility": {
+      "required": [
+        { "type": "income_below", "threshold_type": "fixed", "amount": 70000, "note": "Household income at or below 60% of Michigan state median income (about $70,000 for a family of four). Limits vary by household size." },
+        { "type": "utility_provider_is", "values": ["dte"] },
+        { "type": "has_utility_arrears" }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Government-issued photo ID",
+      "Proof of income for all household members",
+      "DTE Energy account number"
+    ],
+    "how_to_apply": {
+      "method": "Phone (through energy assistance agency)",
+      "url": "https://dteenergy.com/lsp",
+      "phone": "(800) 477-4747",
+      "notes": "You must enroll through a DTE energy assistance agency — they verify your income and usage eligibility. Call 211 to find the nearest agency, or call DTE directly. Enrollment opens October 1 each year. You must make on-time monthly payments to keep forgiveness benefits."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-leadsafe-housing",
+    "name": "Detroit LeadSafe Housing Program",
+    "agency": "City of Detroit Housing and Revitalization Department",
+    "category": "lead",
+    "description": "Free lead paint inspection and removal for homes where young children (under 6) or pregnant women live or visit regularly. If your home tests positive for lead hazards, the program pays for professional lead abatement. May also cover emergency non-lead repairs like roof, furnace, water heater, or porch work depending on available funding.",
+    "covers": "Lead paint inspection, lead hazard removal and abatement, possible emergency repairs (roof, furnace, water heater, porch)",
+    "max_benefit": "Full cost of lead abatement (typically $10,000-$20,000 per home)",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" },
+        { "type": "income_below", "threshold_type": "ami", "percentage": 80, "note": "Low-income household OR child enrolled in Medicaid" },
+        { "type": "has_issue", "value": "lead_paint" },
+        { "type": "has_young_children" },
+        { "type": "in_zip_codes", "values": ["48202", "48203", "48204", "48206", "48208", "48209", "48210", "48211", "48212", "48213", "48214", "48215", "48217", "48227", "48234", "48238"] }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Proof of homeownership (deed or land contract)",
+      "Proof of household income",
+      "Government-issued photo ID",
+      "Documentation of child under 6 or pregnancy in household"
+    ],
+    "how_to_apply": {
+      "method": "Phone, email, or online",
+      "url": "https://detroitmi.gov/departments/detroit-leadsafe-housing",
+      "address": "Coleman A. Young Municipal Center, 2 Woodward Avenue, Suite 908, Detroit, MI 48226",
+      "phone": "(313) 224-6380",
+      "notes": "Email GetTheLeadOut@detroitmi.gov to start an application. Same application system as Critical Home Repair Program (Neighborly). Completing an application does not guarantee services — home condition and repair costs affect final determination. Children must live in or visit the home at least 6 hours per week."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-mihaf",
+    "name": "Michigan Homeowner Assistance Fund (MIHAF)",
+    "agency": "Michigan State Housing Development Authority (MSHDA)",
+    "category": "foreclosure",
+    "description": "A grant program that helped homeowners who fell behind on mortgage payments, property taxes, or insurance due to COVID-19 hardship. The program provided up to $25,000 per household. Note: This program is currently closed and no longer accepting new applications.",
+    "covers": "Delinquent mortgage payments, property taxes, insurance escrow shortages, and other housing expenses",
+    "max_benefit": "Up to $25,000 grant per household",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" },
+        { "type": "income_below", "threshold_type": "ami", "percentage": 150 }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Proof of homeownership",
+      "Proof of income",
+      "Documentation of COVID-19 financial hardship",
+      "Mortgage or property tax delinquency statements"
+    ],
+    "how_to_apply": {
+      "method": "Online (program closed)",
+      "url": "https://www.michigan.gov/mshda/pathway-to-housing/mihaf-homeowner-assistance",
+      "phone": "(844) 756-4423",
+      "notes": "PROGRAM CLOSED — no longer accepting new applications. Step Forward Michigan loans are also closed (last application approved June 30, 2021). For existing Step Forward loan servicing, call (866) 946-7432. If you need foreclosure help now, contact Michigan Legal Aid at (877) 964-4722 or apply for HOPE tax exemption."
+    },
+    "funding_status": "exhausted",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-disabled-veteran-exemption",
+    "name": "Disabled Veteran Property Tax Exemption",
+    "agency": "Michigan Department of Treasury / City of Detroit Office of the Assessor",
+    "category": "tax-relief",
+    "description": "If you are a veteran rated 100% permanently and totally disabled by the VA (or rated individually unemployable), your home is fully exempt from all property taxes. This also applies to the unremarried surviving spouse of a qualifying veteran. Starting in 2025, once approved you no longer need to reapply every year.",
+    "covers": "Complete exemption from all property taxes on your primary residence",
+    "max_benefit": "100% property tax exemption (saves $2,000-$5,000+/year depending on home value)",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" },
+        { "type": "is_veteran" },
+        { "type": "has_disability" }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Form 5107 (Affidavit for Disabled Veterans Exemption)",
+      "VA disability rating letter showing 100% permanent and total disability, or VA certificate for specially adapted housing",
+      "Government-issued photo ID",
+      "Proof of homeownership (deed)"
+    ],
+    "how_to_apply": {
+      "method": "In-person or mail",
+      "url": "https://www.michigan.gov/taxes/property/exemptions/veterans/disabled-veterans-exemption",
+      "address": "Coleman A. Young Municipal Center, 2 Woodward Avenue, Suite 804, Detroit, MI 48226",
+      "phone": "(313) 224-3035",
+      "hours": "Monday-Thursday, 8:00 AM - 4:30 PM",
+      "notes": "File Form 5107 with the City Assessor after January 1 and before December 31 of the year you're claiming the exemption. Starting January 1, 2025, once granted the exemption continues without annual reapplication. Must be rated 100% permanent and total disability or individually unemployable by the VA."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-dte-shutoff-protection",
+    "name": "DTE Shutoff Protection Plan",
+    "agency": "DTE Energy",
+    "category": "utility",
+    "description": "A 12-month payment plan that combines your past-due DTE balance with future energy charges into one affordable monthly payment. While you're enrolled and making payments, DTE cannot shut off your service. Available to all residential DTE customers regardless of income, though a down payment is required to enroll.",
+    "covers": "Combines past-due balance and future energy charges into fixed monthly payments with shutoff protection",
+    "max_benefit": "Shutoff protection for 12 months while past-due balance is spread into affordable payments",
+    "eligibility": {
+      "required": [
+        { "type": "utility_provider_is", "values": ["dte"] }
+      ],
+      "bonus": [
+        { "type": "is_senior", "note": "Seniors 65+ are automatically eligible for additional winter shutoff protections under Michigan law" }
+      ]
+    },
+    "required_docs": [
+      "Government-issued photo ID",
+      "Proof of income for all household members",
+      "DTE Energy account number",
+      "Down payment (amount varies)"
+    ],
+    "how_to_apply": {
+      "method": "Online or phone",
+      "url": "https://www.dteenergy.com/us/en/residential/billing-and-payments/energy-assistance/shutoff-protection-plan.html",
+      "phone": "(800) 477-4747",
+      "notes": "Available to all residential customers regardless of income. Requires a down payment to enroll. If you qualify by income, consider the LSP program instead — it offers debt forgiveness the Shutoff Protection Plan does not. Upload documents through DTE's Document Submission Portal."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-wrap",
+    "name": "Water Residential Assistance Program (WRAP)",
+    "agency": "Wayne Metropolitan Community Action Agency / GLWA",
+    "category": "utility",
+    "description": "A two-year program that helps pay your water bill if you have a low income. You do not need to be behind on your bill or facing shutoff to apply. WRAP provides direct payments toward your water bill, help with past-due amounts, free home water audits, minor plumbing repairs, and case management support.",
+    "covers": "Water bill payment assistance, past-due balance (arrearage) reduction, home water audits, minor plumbing repairs, conservation support",
+    "max_benefit": "Two years of water bill assistance plus arrearage reduction (amounts vary by household)",
+    "eligibility": {
+      "required": [
+        { "type": "income_below", "threshold_type": "fpl", "percentage": 200 }
+      ],
+      "bonus": [
+        { "type": "is_senior", "note": "After completing two WRAP years, seniors 62+ or disabled household members may qualify for WRAPfinity extended benefits" }
+      ]
+    },
+    "required_docs": [
+      "Government-issued photo ID for all household members 18+",
+      "Current water bill",
+      "30 days of income documentation (pay stubs, benefit statements, tax returns)",
+      "Lease showing water bill responsibility (if renting outside Detroit)",
+      "SNAP, TANF, or SSI benefit letter (if applicable, for categorical eligibility)"
+    ],
+    "how_to_apply": {
+      "method": "Phone, email, text, or online",
+      "url": "https://www.waynemetro.org/wrap/",
+      "address": "Wayne Metro CAA, 7310 Woodward Ave, Suite 800, Detroit, MI 48202",
+      "phone": "(313) 386-9727",
+      "notes": "Email wrap@waynemetro.org or text (313) 438-8795. You do NOT need a shutoff notice or past-due bill to apply. Must live in GLWA service region. Both homeowners and renters qualify. Auto-eligible if receiving SNAP, TANF, or SSI."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-lifeline-water",
+    "name": "DWSD Lifeline H2O Water Affordability Plan",
+    "agency": "Detroit Water and Sewerage Department (DWSD)",
+    "category": "utility",
+    "description": "Detroit's income-based water affordability program. If you qualify, you pay a flat $34/month for water service (up to 4,500 gallons). This replaces whatever your normal water bill would be. Limited to 5,000 households.",
+    "covers": "Reduced flat-rate water service at $34/month for up to 4,500 gallons",
+    "max_benefit": "Savings of $30-$80/month compared to standard water rates ($360-$960/year)",
+    "eligibility": {
+      "required": [
+        { "type": "income_below", "threshold_type": "fpl", "percentage": 200 }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Proof of income for all household members",
+      "Government-issued photo ID",
+      "DWSD water account number"
+    ],
+    "how_to_apply": {
+      "method": "Online or phone",
+      "url": "https://detroitmi.gov/departments/water-and-sewerage-department/dwsd-customer-service/dwsd-here-help-water-assistance-programs/lifeline-plan",
+      "phone": "(313) 435-2055",
+      "notes": "Limited to 5,000 households. Funding status uncertain — $3.5 million remaining as of late 2025 after federal and state funds ran out. Apply at lifeline.detroitmi.gov. Call to confirm availability before applying."
+    },
+    "funding_status": "waitlisted",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-mshda-mi-home-loan",
+    "name": "MSHDA MI Home Loan with Down Payment Assistance",
+    "agency": "Michigan State Housing Development Authority (MSHDA)",
+    "category": "homebuyer",
+    "description": "A mortgage program for first-time homebuyers (and repeat buyers in targeted areas) that includes up to $10,000 in down payment and closing cost assistance. The down payment help comes as a second mortgage that is combined with a competitive-rate first mortgage. Must be used with an MSHDA-approved lender.",
+    "covers": "Down payment and closing costs for home purchase (up to $10,000 DPA plus competitive first mortgage rate)",
+    "max_benefit": "Up to $10,000 in down payment assistance; up to $25,000 for first-generation homebuyers through separate pilot program",
+    "eligibility": {
+      "required": [
+        { "type": "income_below", "threshold_type": "fixed", "amount": 174720, "note": "Income limits vary by county, household size, and target/non-target area. Wayne County limits range from ~$91,200-$174,720. Check MSHDA income chart for exact limits." },
+        { "type": "interested_in_buying" }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Government-issued photo ID",
+      "Proof of income (pay stubs, W-2s, tax returns)",
+      "Bank statements (2-3 months)",
+      "Credit report (minimum 640 score required)",
+      "Homebuyer education course certificate",
+      "Purchase agreement for the home"
+    ],
+    "how_to_apply": {
+      "method": "Through MSHDA-approved lender",
+      "url": "https://www.michigan.gov/mshda",
+      "phone": "(517) 373-8370",
+      "notes": "Must work with an MSHDA-approved lender — find one at michigan.gov/mshda. Minimum credit score 640. Maximum debt-to-income ratio 45%. Sales price limit is $544,233 (2025). First-time buyers and repeat buyers in targeted areas eligible. Homebuyer education course required. First-Generation DPA program offers $25,000 (separate application, limited funding)."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-land-bank-side-lot",
+    "name": "Side Lot Program",
+    "agency": "Detroit Land Bank Authority",
+    "category": "general",
+    "description": "Buy the empty lot next to your house for $100. If a vacant lot shares a property line with your home (including across the alley, but not across the street), you can purchase it to expand your yard, start a garden, or just prevent blight next door. The lot must be 7,500 square feet or smaller.",
+    "covers": "Purchase of adjacent vacant lot for $100",
+    "max_benefit": "Vacant lot for $100 (market value typically $1,000-$5,000+)",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Proof of homeownership (deed showing adjacent property)",
+      "Government-issued photo ID",
+      "Proof of occupancy"
+    ],
+    "how_to_apply": {
+      "method": "Online",
+      "url": "https://buildingdetroit.org/land-reuse-programs",
+      "phone": "(313) 974-6869",
+      "notes": "Buy online anytime at buildingdetroit.org. Lot must share a property line with your home (across alley OK, across street not eligible). Lot must be 7,500 sq ft or less. You must own and occupy the adjacent house. Email sidelot@detroitlandbank.org with questions."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-habitat-critical-repair",
+    "name": "Habitat for Humanity Detroit Critical Home Repair",
+    "agency": "Habitat for Humanity Detroit",
+    "category": "home-repair",
+    "description": "Free health and safety repairs for low-income Detroit homeowners who cannot afford to fix their homes or take out a loan. Habitat uses volunteer labor to keep costs down. You will be asked to contribute 'sweat equity' hours — hands-on time working alongside volunteers on your project or other Habitat projects.",
+    "covers": "Health and safety home repairs (roof, plumbing, electrical, structural, accessibility)",
+    "max_benefit": "Full cost of approved health and safety repairs (grant, not a loan)",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" },
+        { "type": "income_below", "threshold_type": "ami", "percentage": 80 }
+      ],
+      "bonus": [
+        { "type": "is_senior", "note": "Seniors and households with children receive priority" }
+      ]
+    },
+    "required_docs": [
+      "Proof of homeownership (deed or land contract)",
+      "Proof of income for all household members",
+      "Government-issued photo ID"
+    ],
+    "how_to_apply": {
+      "method": "Online or phone",
+      "url": "https://habitatdetroit.org/hfh-programs/critical-home-repair/",
+      "address": "Habitat for Humanity Detroit, 14140 Livernois Ave, Detroit, MI 48238",
+      "phone": "(313) 521-6691",
+      "notes": "Sweat equity hours are required — unwillingness to participate disqualifies you. Income limits based on Wayne County Area Median Income (80% AMI). Program prioritizes health and safety repairs eligible for grant funding."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-wayne-metro-home-repair-loan",
+    "name": "Wayne Metro 0% Interest Home Repair Loan",
+    "agency": "Wayne Metropolitan Community Action Agency",
+    "category": "home-repair",
+    "description": "A 10-year, interest-free loan of $5,000 to $25,000 for Detroit homeowners who need to repair their homes. Covers major repairs like roof replacement, furnace, plumbing, electrical, lead removal, and structural work. You must have owned and lived in the home for at least 6 months.",
+    "covers": "Lead removal, electrical repairs, furnace/HVAC replacement, roof replacement, plumbing, doors and windows, concrete, porches, foundations, and structural repairs",
+    "max_benefit": "$5,000-$25,000 (0% interest, 10-year repayment)",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" },
+        { "type": "income_below", "threshold_type": "ami", "percentage": 80, "note": "Low to moderate income; homeowners in HUD designated areas may qualify regardless of income" }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Proof of homeownership (must have owned and occupied for 6+ months)",
+      "Proof of income for all household members",
+      "Government-issued photo ID"
+    ],
+    "how_to_apply": {
+      "method": "Phone",
+      "url": "https://www.waynemetro.org/programs/",
+      "address": "Wayne Metro CAA, 7310 Woodward Ave, Suite 800, Detroit, MI 48202",
+      "phone": "(313) 388-9799",
+      "notes": "Must have owned and lived in the home for at least 6 months. Vacant or unoccupied homes are not eligible. Lead removal is required before other repairs begin if lead hazards are present. Homeowners in HUD designated areas within each city council district may qualify regardless of income."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-homestead-property-tax-credit",
+    "name": "Homestead Property Tax Credit",
+    "agency": "Michigan Department of Treasury",
+    "category": "tax-relief",
+    "description": "A state tax credit that refunds part of your property taxes if they're high relative to your income. You claim it on your Michigan income tax return (even if you don't owe state income tax). Both homeowners and renters qualify. Renters can claim 20% of their rent as property tax. The maximum credit is $1,900 for 2025.",
+    "covers": "Refund of property taxes that exceed 3.2% of household income, claimed on Michigan income tax return",
+    "max_benefit": "Up to $1,900 for tax year 2025",
+    "eligibility": {
+      "required": [
+        { "type": "income_below", "threshold_type": "fixed", "amount": 71500, "note": "Total household resources must be $71,500 or less. Credit begins to phase out above $62,500." }
+      ],
+      "bonus": [
+        { "type": "is_senior", "note": "Seniors may qualify for additional Senior Homestead Property Tax Credit (MI-1040CR-2)" }
+      ]
+    },
+    "required_docs": [
+      "Michigan income tax return (MI-1040) or standalone credit claim",
+      "Form MI-1040CR (Homestead Property Tax Credit Claim)",
+      "Property tax statements or rent receipts showing total rent paid",
+      "W-2s, 1099s, or other income documentation"
+    ],
+    "how_to_apply": {
+      "method": "Filed with Michigan income tax return",
+      "url": "https://www.michigan.gov/taxes/property/homestead-property-tax-credit-claim-mi-1040cr-adjustment-or-denial-homeowners-checklist",
+      "phone": "(517) 636-4486",
+      "notes": "File Form MI-1040CR with your Michigan income tax return by April 15. If you don't file a state return, you can file the credit claim on its own. You have up to 4 years to claim (2025 credit can be filed through April 15, 2030). Homesteads with taxable value above $165,400 are not eligible. Free tax prep available through Accounting Aid Society at (313) 556-1920 for households under $67,000 income."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-thaw",
+    "name": "THAW (The Heat and Warmth Fund)",
+    "agency": "THAW Fund",
+    "category": "utility",
+    "description": "A nonprofit that helps Michigan residents pay their energy bills when they're in an energy crisis. THAW administers the Michigan Energy Assistance Program (MEAP) and provides direct bill payment for heating and electricity. More than 70% of households served have a child or senior in the home.",
+    "covers": "Direct payment toward gas and electric bills for low-income Michigan residents in energy crisis",
+    "max_benefit": "Varies by program and funding availability; direct bill payment assistance",
+    "eligibility": {
+      "required": [
+        { "type": "income_below", "threshold_type": "fixed", "amount": 61861, "note": "60% of Michigan state median income (expanded eligibility for 2025-2026 heating season). About $61,861 for a family of four." },
+        { "type": "has_utility_arrears" }
+      ],
+      "bonus": [
+        { "type": "is_senior", "note": "Seniors and households with children receive priority" }
+      ]
+    },
+    "required_docs": [
+      "Government-issued photo ID",
+      "Proof of income for all household members",
+      "Current utility bill(s)",
+      "Social Security numbers for all household members"
+    ],
+    "how_to_apply": {
+      "method": "Phone",
+      "url": "https://thawfund.org/assistance-2/",
+      "phone": "(800) 866-8429",
+      "notes": "Due to high demand, THAW periodically stops accepting new applications. Check thawfund.org or call to confirm they're accepting applications. Not currently accepting walk-ins on Fridays. Also not currently accepting water bill assistance applications. If THAW is closed, call 211 for other energy assistance options."
+    },
+    "funding_status": "waitlisted",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-consumers-energy-care",
+    "name": "Consumers Energy CARE Program",
+    "agency": "Consumers Energy",
+    "category": "utility",
+    "description": "A 24-month affordable payment plan for Consumers Energy customers who qualify by income. You get a fixed monthly bill and your past-due balance is frozen and gradually reduced as you make on-time payments. Note: Most of Detroit is served by DTE, but some areas on the city's edges use Consumers Energy.",
+    "covers": "Fixed monthly Consumers Energy bill with past-due balance reduction for on-time payments",
+    "max_benefit": "Past-due balance frozen and reduced over 24 months; ongoing bill credits for on-time payments",
+    "eligibility": {
+      "required": [
+        { "type": "income_below", "threshold_type": "fpl", "percentage": 150 },
+        { "type": "utility_provider_is", "values": ["consumers"] }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Government-issued photo ID",
+      "Proof of income for all household members",
+      "Consumers Energy account number"
+    ],
+    "how_to_apply": {
+      "method": "Phone",
+      "url": "https://www.consumersenergy.com/residential/account-and-billing/payment-plans-and-assistance",
+      "phone": "211",
+      "notes": "Call 211 to be connected to a nonprofit that processes CARE applications. Only for Consumers Energy customers — most of Detroit is DTE territory. Check your bill to confirm your provider. If you're a DTE customer, see the DTE LSP program instead."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-wayne-county-tax-payment-plan",
+    "name": "Wayne County Property Tax Payment Plan",
+    "agency": "Wayne County Treasurer",
+    "category": "foreclosure",
+    "description": "If you owe delinquent property taxes in Wayne County, you can enter a payment plan to avoid tax foreclosure. The plan lets you spread out what you owe over time at a reduced interest rate. You must enter the plan before the June 30 deadline each year to keep your home out of the tax foreclosure auction.",
+    "covers": "Payment plan for delinquent property taxes with reduced interest rate to prevent foreclosure",
+    "max_benefit": "Prevents tax foreclosure; reduces interest rate on delinquent taxes",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" },
+        { "type": "tax_status", "values": ["delinquent", "in_foreclosure"] }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Government-issued photo ID",
+      "Property tax delinquency notice",
+      "Proof of property ownership"
+    ],
+    "how_to_apply": {
+      "method": "In-person or online",
+      "url": "https://www.waynecounty.com/elected/treasurer/tax-exempt-program.aspx",
+      "address": "Wayne County Treasurer, 400 Monroe St, 5th Floor, Detroit, MI 48226",
+      "phone": "(313) 224-5990",
+      "notes": "CRITICAL DEADLINE: Must enter payment plan by June 30 each year to avoid tax foreclosure auction. Reduced interest rate available. For property tax help, also apply for HOPE — if approved, it can reduce or eliminate your current-year taxes. Detroit Taxpayer Service Center: (313) 224-3560."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-make-it-home",
+    "name": "Make It Home Program",
+    "agency": "United Community Housing Coalition (UCHC)",
+    "category": "foreclosure",
+    "description": "If your home has been tax-foreclosed by Wayne County, this program may be able to buy it before it goes to auction and sell it back to you at an affordable price. UCHC works with the City of Detroit to exercise its right of first refusal on tax-foreclosed homes where the resident still lives there.",
+    "covers": "Affordable repurchase of tax-foreclosed homes to prevent displacement",
+    "max_benefit": "Ability to buy back your tax-foreclosed home at an affordable price (well below market)",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" },
+        { "type": "tax_status", "values": ["in_foreclosure"] }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Proof the property is your primary residence",
+      "Government-issued photo ID",
+      "Tax foreclosure notice from Wayne County"
+    ],
+    "how_to_apply": {
+      "method": "In-person or phone",
+      "url": "https://www.uchcdetroit.org/makeithome",
+      "address": "United Community Housing Coalition, 220 Bagley St, Suite 900, Detroit, MI 48226",
+      "phone": "(313) 963-3310",
+      "notes": "Must be the current resident of the tax-foreclosed property. Property must still be in the foreclosure process (not yet auctioned). Act quickly — there are strict timelines in the foreclosure process. UCHC also helps with HOPE applications and other housing stability services."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-renew-detroit",
+    "name": "Renew Detroit Home Repair Program",
+    "agency": "City of Detroit Housing and Revitalization Department",
+    "category": "home-repair",
+    "description": "A $30 million+ home repair program focused on low-income seniors and homeowners with disabilities. Funded through federal ARPA dollars and state grants, with a goal of servicing 1,000+ additional homes. Covers essential home repairs to keep residents safely in their homes.",
+    "covers": "Essential home repairs for seniors and disabled homeowners — roof, plumbing, electrical, furnace, structural, and accessibility modifications",
+    "max_benefit": "Full cost of essential repairs (average repair cost varies by scope)",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" },
+        { "type": "income_below", "threshold_type": "ami", "percentage": 80 }
+      ],
+      "bonus": [
+        { "type": "is_senior", "note": "Program specifically prioritizes seniors 62+" },
+        { "type": "has_disability", "note": "This program prioritizes seniors 62+ and people with disabilities" }
+      ]
+    },
+    "required_docs": [
+      "Proof of homeownership (deed or land contract)",
+      "Proof of income",
+      "Government-issued photo ID",
+      "Documentation of disability (if applicable)",
+      "Current property tax bill or payment plan documentation"
+    ],
+    "how_to_apply": {
+      "method": "Online or phone",
+      "url": "https://detroitmi.gov/government/mayors-office/renew-detroit-home-repair-program",
+      "address": "Coleman A. Young Municipal Center, 2 Woodward Avenue, Suite 908, Detroit, MI 48226",
+      "phone": "(313) 224-6380",
+      "notes": "Applications open through the Neighborly system. Same intake system as Critical Home Repair and LeadSafe Housing. Must be current on property taxes or in a payment plan. Priority given to seniors and homeowners with disabilities."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-ser",
+    "name": "State Emergency Relief (SER)",
+    "agency": "Michigan Department of Health and Human Services (MDHHS)",
+    "category": "utility",
+    "description": "Emergency money from the state when you're about to lose your heat, electricity, or home. If your utility is shut off or you have a shutoff notice, SER can pay part of the bill to restore service. It also covers emergency housing needs like preventing an eviction. There may be a co-payment — an amount you have to pay before SER kicks in.",
+    "covers": "Emergency utility payments to prevent or restore shutoff (gas, electric), eviction prevention, and other emergency housing needs",
+    "max_benefit": "Varies by emergency type; covers the amount needed to resolve the immediate crisis minus any co-payment",
+    "eligibility": {
+      "required": [
+        { "type": "income_below", "threshold_type": "fpl", "percentage": 150, "note": "Income test applies; co-payment may be required based on income" },
+        { "type": "has_utility_arrears" }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Government-issued photo ID (driver's license, state ID, passport)",
+      "Social Security cards for household members",
+      "Proof of income (pay stubs, benefit letters, bank statements)",
+      "Utility shutoff notice or bill showing past-due amount",
+      "Proof of rent (lease agreement, if applying for eviction prevention)"
+    ],
+    "how_to_apply": {
+      "method": "Online or in-person",
+      "url": "https://www.mibridges.michigan.gov/access/",
+      "phone": "(844) 799-9876",
+      "notes": "Apply online through MI Bridges or in person at your local MDHHS office. Processing takes about 10 days. Asset limit is $15,000 (home and one car excluded). Co-payment may be required based on your income. For legal help with SER applications, call the Counsel and Advocacy Law Line at (888) 783-8190 (Mon-Thu 9-5, Fri 9-1)."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-home-heating-credit",
+    "name": "Michigan Home Heating Credit",
+    "agency": "Michigan Department of Treasury",
+    "category": "utility",
+    "description": "A state tax credit that helps low-income households pay heating costs. You file a claim form and get a credit applied to your heating bill — on average about $250. You do not need to file a Michigan income tax return to claim this credit. Both homeowners and renters qualify.",
+    "covers": "Credit applied to your heating bill (gas, electric, or heating oil)",
+    "max_benefit": "Approximately $250 on average (varies by income and household size)",
+    "eligibility": {
+      "required": [
+        { "type": "income_below", "threshold_type": "fpl", "percentage": 110, "note": "Income limits vary by household size. Example: $16,586 for 1 person, $46,157 for 6 persons (2025 tax year)." }
+      ],
+      "bonus": [
+        { "type": "is_senior", "note": "Seniors may qualify for higher credit amounts" }
+      ]
+    },
+    "required_docs": [
+      "Form MI-1040CR-7 (Home Heating Credit Claim)",
+      "Heating bill or account information",
+      "Proof of income (W-2s, 1099s, benefit statements)",
+      "Social Security number"
+    ],
+    "how_to_apply": {
+      "method": "Filed with Michigan income tax return or standalone",
+      "url": "https://www.michigan.gov/taxes/questions/iit/accordion/heating/home-heating-credit-information-1",
+      "phone": "(517) 636-4486",
+      "notes": "File Form MI-1040CR-7 — you do NOT need to file a state income tax return to claim this. Deadline for 2025 credit: September 30, 2026. Credit is applied directly to your heating bill. Free tax prep available through Accounting Aid Society at (313) 556-1920."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-down-payment-assistance",
+    "name": "Detroit Down Payment Assistance Program",
+    "agency": "City of Detroit Housing and Revitalization Department",
+    "category": "homebuyer",
+    "description": "Grants up to $25,000 for Detroit residents buying a home in the city. The money covers your down payment, closing costs, and can even buy down your interest rate. You must have lived in Detroit for at least 12 months and complete a homebuyer education course. One-time use only — the grant does not need to be repaid if you stay in the home for 3 years.",
+    "covers": "Down payment, closing costs, interest rate buy-down, and principal reduction for home purchase in Detroit",
+    "max_benefit": "Up to $25,000 (cannot exceed 50% of purchase price)",
+    "eligibility": {
+      "required": [
+        { "type": "income_below", "threshold_type": "fpl", "percentage": 300, "note": "300% FPL: $45,180 for 1 person, $93,600 for 4 persons, increasing by ~$16,140 per additional person" },
+        { "type": "interested_in_buying" }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Valid government ID with issue date at least 12 months prior",
+      "Proof of Detroit residency for 12+ months (signed lease or 12 months of utility bills)",
+      "Tax returns, W-2s, Social Security statements, or 1099s",
+      "HUD-approved Homebuyer Education Course certificate",
+      "Lender pre-qualification letter",
+      "Signed purchase agreement",
+      "Homebuyer interest certification form"
+    ],
+    "how_to_apply": {
+      "method": "Online",
+      "url": "https://detroitmi.gov/departments/housing-and-revitalization-department/homebuyers/detroit-down-payment-assistance-program",
+      "address": "Coleman A. Young Municipal Center, 2 Woodward Avenue, Suite 908, Detroit, MI 48226",
+      "phone": "(313) 224-6380",
+      "notes": "Program status fluctuates — may be paused to new applications at times. Check the city website or call to confirm availability. Must not have owned property in the past 3 years (unless lost to tax foreclosure 2010-2016). Must contribute minimum $1,000 toward purchase. Must stay in the home 3 years or repay the grant. Processing takes 2-3 weeks after complete file submission."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-stellantis-home-repair",
+    "name": "Stellantis Home Repair Program (Bridging Neighborhoods)",
+    "agency": "City of Detroit Mayor's Office / Bridging Neighborhoods",
+    "category": "home-repair",
+    "description": "Free home repairs funded by Stellantis (over $5 million) for homeowners living near the Detroit Assembly Complex on the east side. Part of a community benefits agreement. The program opens in phases — when a new round opens, you apply through the city and repairs are done at no cost if selected.",
+    "covers": "Home repairs including plumbing, electrical, structural, roofing, and health/safety upgrades",
+    "max_benefit": "Full cost of approved repairs (funded by Stellantis community benefit agreement)",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" },
+        { "type": "in_zip_codes", "values": ["48204", "48206", "48208", "48209", "48210", "48216", "48217", "48238"] }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Proof of homeownership (deed or land contract)",
+      "Government-issued photo ID",
+      "Proof of occupancy"
+    ],
+    "how_to_apply": {
+      "method": "Online",
+      "url": "https://detroitmi.gov/government/mayors-office/bridging-neighborhoods/programs/stellantis-home-repair-program",
+      "phone": "(313) 628-2231",
+      "notes": "Applications open in phases — Phase 3 was January-March 2025. Check the city website or call the Bridging Neighborhoods hotline at (313) 628-2231 for the next application window. Applications accepted through the Neighborly online system. Priority given to residents in the Stellantis Community Benefits Agreement Impact Area ZIP codes."
+    },
+    "funding_status": "seasonal",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-vanguard-emergency-repair",
+    "name": "Vanguard Community Development Emergency Home Repair",
+    "agency": "Vanguard Community Development Corporation",
+    "category": "home-repair",
+    "description": "Emergency home repair grants for homeowners on Detroit's east side. Vanguard focuses on health, safety, and energy efficiency — fixing things like structural hazards, plumbing and electrical problems, and installing energy-efficient solutions. Applications typically open once per year for a limited window.",
+    "covers": "Emergency health and safety repairs, structural fixes, plumbing, electrical, energy efficiency upgrades, and lead hazard remediation",
+    "max_benefit": "Grant covers full cost of approved repairs (amount varies by scope)",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Proof of homeownership",
+      "Government-issued photo ID",
+      "Proof of income"
+    ],
+    "how_to_apply": {
+      "method": "In-person",
+      "url": "https://www.vanguarddetroit.org/housing-development",
+      "address": "Vanguard Community Development, 2795 East Grand Boulevard, Detroit, MI 48211",
+      "notes": "Applications open once per year for a limited window (typically summer). 2024 applications were accepted June 10 - July 12. Check vanguarddetroit.org for the next application period. East side of Detroit focus. Includes lead inspection and risk assessment as part of the process."
+    },
+    "funding_status": "seasonal",
+    "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-usnapbac-senior-repair",
+    "name": "U-SNAP-BAC Senior Empowerment Grant",
+    "agency": "U-SNAP-BAC (United Streets Networking and Planning - Building A Community)",
+    "category": "home-repair",
+    "description": "Small grants of up to $2,000 for east-side Detroit seniors to make health and safety repairs to their homes. U-SNAP-BAC is a consortium of 11 community organizations on Detroit's east side that also provides financial coaching and homeownership counseling.",
+    "covers": "Minor home repairs for health and safety needs (up to $2,000)",
+    "max_benefit": "Up to $2,000",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" },
+        { "type": "is_senior" }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Proof of homeownership",
+      "Government-issued photo ID showing age 62+",
+      "Proof of Detroit residency"
+    ],
+    "how_to_apply": {
+      "method": "In-person or phone",
+      "url": "https://www.usnapbac.org/programs-and-services/",
+      "address": "U-SNAP-BAC, 14901 E. Warren Ave, Detroit, MI 48224",
+      "phone": "(313) 640-1100",
+      "notes": "Funding is limited and program has reached its funding limit in past rounds. Check usnapbac.org or call to confirm if accepting applications. East side of Detroit focus. Also offers free financial coaching and homeownership education."
+    },
+    "funding_status": "waitlisted",
+    "last_verified": "2026-02-23"
+  }
+]

@@ -1,0 +1,124 @@
+{
+  "year": 2026,
+  "asset_limit": 12000,
+  "average_tax_bill": {
+    "low": 1500,
+    "high": 3000
+  },
+  "thresholds": {
+    "1": { "100": 16580, "75": 18775, "50": 20970, "25": 23165, "10": 24890 },
+    "2": { "100": 22320, "75": 25265, "50": 28210, "25": 31155, "10": 33480 },
+    "3": { "100": 28060, "75": 31758, "50": 35455, "25": 39153, "10": 42075 },
+    "4": { "100": 33800, "75": 38255, "50": 42710, "25": 47165, "10": 50680 },
+    "5": { "100": 39540, "75": 44750, "50": 49960, "25": 55170, "10": 59280 },
+    "6": { "100": 45280, "75": 51245, "50": 57210, "25": 63175, "10": 67885 },
+    "7": { "100": 51020, "75": 57743, "50": 64465, "25": 71188, "10": 76490 },
+    "8": { "100": 56760, "75": 64240, "50": 71720, "25": 79200, "10": 85100 }
+  },
+  "board_of_review": [
+    {
+      "session": "march",
+      "label": "March Board of Review",
+      "dates": ["2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13"],
+      "description": "Primary session for current-year tax exemptions"
+    },
+    {
+      "session": "july",
+      "label": "July Board of Review",
+      "dates": ["2026-07-14", "2026-07-15", "2026-07-16"],
+      "description": "Mid-year session for corrections and late filings"
+    },
+    {
+      "session": "december",
+      "label": "December Board of Review",
+      "dates": ["2026-12-08", "2026-12-09", "2026-12-10"],
+      "description": "Final session for current tax year"
+    }
+  ],
+  "hope_deadline": "2026-11-06T16:30:00",
+  "hope_deadline_label": "November 6, 2026 by 4:30 PM",
+  "filing_methods": [
+    {
+      "method": "E-HOPE Online Portal",
+      "type": "online",
+      "url": "https://detroitmi.gov/webapp/e-hope",
+      "description": "Submit your application and upload documents online"
+    },
+    {
+      "method": "In Person",
+      "type": "in_person",
+      "address": "Coleman A. Young Municipal Center, 2 Woodward Ave, Suite 130, Detroit, MI 48226",
+      "phone": "(313) 224-3560",
+      "hours": "Monday-Friday, 8:00 AM - 4:30 PM",
+      "description": "Bring your completed application and documents to the Taxpayer Service Center"
+    },
+    {
+      "method": "Email",
+      "type": "email",
+      "email": "HOPE@detroitmi.gov",
+      "description": "Email scanned application and documents"
+    }
+  ],
+  "required_documents": {
+    "always": [
+      "Completed Application for Poverty Exemption (Michigan Treasury Form 5737)",
+      "Proof of ownership (deed, land contract, or court order)",
+      "Photo ID for all adults in household"
+    ],
+    "if_files_taxes": [
+      "Most recent federal tax return (Form 1040) for all household members who file",
+      "Most recent state tax return (MI-1040) for all household members who file",
+      "W-2s and/or 1099s for the most recent tax year"
+    ],
+    "if_non_filer": [
+      "Non-filer affidavit (provided by the city or available at E-HOPE)",
+      "Proof of all household income: SSA benefit letters, pension statements, employer pay stubs, unemployment letters, child support documentation",
+      "Bank statements for the last 3 months for all household accounts"
+    ],
+    "if_senior_non_filer": [
+      "Social Security Administration benefit letter (SSA-1099 or annual statement)",
+      "Pension or retirement account statements",
+      "Non-filer affidavit"
+    ],
+    "if_land_contract": [
+      "Copy of the land contract agreement",
+      "Proof of current land contract payments"
+    ],
+    "if_income_dropped": [
+      "Documentation showing prior year income (tax return, W-2, or pay stubs)",
+      "Documentation showing current year income reduction (termination letter, reduced hours notice, medical documentation)"
+    ],
+    "asset_documentation": [
+      "Bank statements for all accounts (checking, savings, CDs) for the last 3 months",
+      "Investment account statements (stocks, bonds, retirement accounts other than primary)",
+      "Vehicle titles (primary vehicle is excluded from asset calculation)"
+    ]
+  },
+  "assistance_partners": [
+    {
+      "name": "United Community Housing Coalition (UCHC)",
+      "phone": "(313) 963-3310",
+      "url": "https://www.uchcdetroit.org",
+      "services": "Free help with HOPE applications, tax foreclosure prevention, housing counseling"
+    },
+    {
+      "name": "Wayne Metro Community Action Agency",
+      "phone": "(313) 388-9799",
+      "url": "https://www.waynemetro.org",
+      "services": "HOPE application assistance, financial counseling, utility assistance"
+    },
+    {
+      "name": "Michigan Legal Services",
+      "phone": "(313) 964-4130",
+      "url": "https://www.michiganlegalservices.org",
+      "services": "Free legal help for property tax issues, foreclosure defense"
+    },
+    {
+      "name": "Accounting Aid Society",
+      "phone": "(313) 556-1920",
+      "url": "https://www.accountingaidsociety.org",
+      "services": "Free tax preparation, HOPE application support for qualifying residents"
+    }
+  ],
+  "info_url": "https://detroitmi.gov/government/mayors-office/chief-financial-officer/homeowners-property-exemption-hope"
+}

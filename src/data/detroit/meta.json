@@ -1,0 +1,36 @@
+{
+  "id": "detroit",
+  "name": "Detroit",
+  "state": "Michigan",
+  "state_abbr": "MI",
+  "valid_zips": [
+    "48201", "48202", "48203", "48204", "48205", "48206", "48207",
+    "48208", "48209", "48210", "48211", "48212", "48213", "48214",
+    "48215", "48216", "48217", "48219", "48221", "48223", "48224",
+    "48225", "48226", "48227", "48228", "48229", "48231", "48232",
+    "48233", "48234", "48235", "48236", "48238", "48239", "48240",
+    "48242", "48243", "48244", "48255", "48260", "48264", "48265",
+    "48266", "48267", "48268", "48269", "48272", "48275", "48277",
+    "48278", "48279", "48288"
+  ],
+  "fallback_resource": {
+    "name": "Michigan 211",
+    "phone": "211",
+    "url": "https://mi211.org"
+  },
+  "legal_aid": {
+    "name": "Michigan Legal Aid",
+    "phone": "(877) 964-4722",
+    "url": "https://michiganlegalhelp.org",
+    "note": "Free legal help for housing issues including foreclosure, eviction, and property tax disputes"
+  },
+  "tax_prep": {
+    "name": "Accounting Aid Society",
+    "phone": "(313) 556-1920",
+    "url": "https://accountingaidsociety.org",
+    "note": "Free tax preparation for households earning under $67,000"
+  },
+  "fpl_year": 2026,
+  "ami_year": 2025,
+  "ami_source": "HUD FY2025 Detroit-Warren-Dearborn MSA"
+}
