@@ -1,0 +1,17 @@
+{
+  "slug": "villages-cdc",
+  "name": "Villages Community Development Corporation",
+  "shortName": "Villages CDC",
+  "city": "detroit",
+  "intakeEnabled": true,
+  "contactPromise": "within 2 business days",
+  "managerEmail": "",
+  "crm": {
+    "type": "zoho",
+    "enabled": false
+  },
+  "sheetsFallback": {
+    "enabled": false,
+    "spreadsheetId": ""
+  }
+}

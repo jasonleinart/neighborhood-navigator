@@ -667,7 +667,7 @@
     "name": "Renew Detroit Home Repair Program",
     "agency": "City of Detroit Housing and Revitalization Department",
     "category": "home-repair",
-    "description": "A $30 million+ home repair program focused on low-income seniors and homeowners with disabilities. Funded through federal ARPA dollars and state grants, with a goal of servicing 1,000+ additional homes. Covers essential home repairs to keep residents safely in their homes.",
+    "description": "A $45 million home repair program (ARPA + State of Michigan) focused on low-income seniors and homeowners with disabilities. Phase 1 and Phase 2 are both closed — the program received 12,621 applications for roughly 2,000 slots. Check the city website for any future phases.",
     "covers": "Essential home repairs for seniors and disabled homeowners — roof, plumbing, electrical, furnace, structural, and accessibility modifications",
     "max_benefit": "Full cost of essential repairs (average repair cost varies by scope)",
     "eligibility": {
@@ -694,8 +694,8 @@
       "phone": "(313) 224-6380",
       "notes": "Applications open through the Neighborly system. Same intake system as Critical Home Repair and LeadSafe Housing. Must be current on property taxes or in a payment plan. Priority given to seniors and homeowners with disabilities."
     },
-    "funding_status": "open",
-    "last_verified": "2026-02-23"
+    "funding_status": "waitlisted",
+    "last_verified": "2026-02-27"
   },
   {
     "id": "detroit-ser",
@@ -879,5 +879,70 @@
     },
     "funding_status": "waitlisted",
     "last_verified": "2026-02-23"
+  },
+  {
+    "id": "detroit-home-repair-fund",
+    "name": "Detroit Home Repair Fund",
+    "agency": "Enterprise Community Partners (with Gilbert Family Foundation, ProMedica, DTE Energy)",
+    "category": "home-repair",
+    "description": "A $20 million fund providing comprehensive home repairs to low-income Detroit homeowners. The fund covers everything from roofing and plumbing to electrical and structural work. Administered by Enterprise Community Partners working with 13 local nonprofit partners. 97% of homes entering the program failed basic survivability standards. The program has a 14,000-person waitlist and received 250,000 phone calls in its first week.",
+    "covers": "Comprehensive home repairs — roof, plumbing, electrical, structural, HVAC, windows, and accessibility modifications. Average cost per home is approximately $28,600.",
+    "max_benefit": "Full cost of necessary repairs (average ~$28,600 per home)",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" },
+        { "type": "income_below", "threshold_type": "ami", "percentage": 80 }
+      ],
+      "bonus": [
+        { "type": "is_senior", "note": "80% reduction in falls reported among senior residents after repairs" },
+        { "type": "has_disability", "note": "Accessibility modifications included when needed" }
+      ]
+    },
+    "required_docs": [
+      "Proof of homeownership (deed or land contract)",
+      "Proof of income for all household members",
+      "Government-issued photo ID",
+      "Current property tax bill or payment plan",
+      "Proof of Detroit residency"
+    ],
+    "how_to_apply": {
+      "method": "Phone or through a partner organization",
+      "url": "https://www.enterprisecommunity.org/impact-areas/preservation-and-production/detroit-home-repair-fund",
+      "phone": "(313) 388-9799",
+      "notes": "Program has a waitlist of approximately 14,000 residents. Contact Wayne Metropolitan Community Action Agency at (313) 388-9799 for intake. 13 nonprofit partners provide services across different neighborhoods. Funded by Gilbert Family Foundation ($10M), ProMedica ($8M), and DTE Energy ($2M)."
+    },
+    "funding_status": "waitlisted",
+    "last_verified": "2026-02-27"
+  },
+  {
+    "id": "detroit-zero-interest-home-repair-loan",
+    "name": "Detroit 0% Interest Home Repair Loans",
+    "agency": "City of Detroit Housing and Revitalization Department",
+    "category": "home-repair",
+    "description": "Interest-free loans from the City of Detroit for essential home repairs. Loans range from $5,000 to $25,000 and are repaid over 10 years with no interest charges. Covers major systems like electrical, furnace, roof, plumbing, and structural repairs. This is a loan, not a grant — but at 0% interest over 10 years, the monthly payments are manageable.",
+    "covers": "Electrical repairs, furnace replacement, roof repair, plumbing, doors and windows, porch and structural work",
+    "max_benefit": "$5,000-$25,000 (0% interest loan repaid over 10 years)",
+    "eligibility": {
+      "required": [
+        { "type": "is_homeowner" },
+        { "type": "income_below", "threshold_type": "ami", "percentage": 80 }
+      ],
+      "bonus": []
+    },
+    "required_docs": [
+      "Proof of homeownership (deed or land contract)",
+      "Proof of income for all household members",
+      "Government-issued photo ID",
+      "Current property tax bill or payment plan",
+      "Proof of homeowners insurance"
+    ],
+    "how_to_apply": {
+      "method": "Phone",
+      "url": "https://detroitmi.gov/how-do-i/obtain-grant-information/home-repair-program",
+      "phone": "(313) 388-9799",
+      "notes": "Contact Wayne Metropolitan Community Action Agency for intake at (313) 388-9799. Must be current on property taxes or have an active payment plan. Homeowners insurance required. This is a 0% interest loan, not a grant — monthly payments are based on the loan amount over a 10-year term."
+    },
+    "funding_status": "open",
+    "last_verified": "2026-02-27"
   }
 ]

@@ -15,10 +15,13 @@ import type {
   MatchResult,
   UtilityProvider,
 } from "@/lib/types";
+import { trackEvent } from "@/lib/analytics";
+import type { TenantConfig } from "@/lib/types";
 import StepIndicator from "@/components/StepIndicator";
 import ResultsGroup from "@/components/ResultsGroup";
 import DocumentChecklist from "@/components/DocumentChecklist";
 import PrintableResults from "@/components/PrintableResults";
+import IntakeForm from "@/components/IntakeForm";
 
 const INITIAL_INPUT: ResidentInput = {
   zip: "",
@@ -37,10 +40,22 @@ const INITIAL_INPUT: ResidentInput = {
   utility_provider: "not_sure",
 };
 
+function loadTenant(slug: string | null): TenantConfig | null {
+  if (!slug) return null;
+  try {
+    // Tenant configs are bundled as static JSON
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    return require(`@/data/tenants/${slug}.json`) as TenantConfig;
+  } catch {
+    return null;
+  }
+}
+
 export default function Screener({ citySlug }: { citySlug: string }) {
   const searchParams = useSearchParams();
   const cityData = getCityData(citySlug);
   const zipFromUrl = searchParams.get("zip") || "";
+  const tenant = loadTenant(searchParams.get("org"));
 
   const [step, setStep] = useState(1);
   const [editingZip, setEditingZip] = useState(!zipFromUrl);
@@ -79,12 +94,36 @@ export default function Screener({ citySlug }: { citySlug: string }) {
 
   function handleNext() {
     if (step < 3) {
+      trackEvent("screener-step-completed", { step });
       setStep(step + 1);
     } else if (step === 3) {
-      if (!zipIsValid) return; // require ZIP before matching
+      if (!zipIsValid) return;
       const matched = matchPrograms(input, cityData!.programs);
       setResults(matched);
       setStep(4);
+      trackEvent("screener-results-shown", {
+        matchCount: matched.length,
+        strongCount: matched.filter((r) => r.confidence === "strong").length,
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      // Fire anonymous screening event (no PII)
+      try {
+        const beaconData = JSON.stringify({
+          tenant_slug: tenant?.slug || null,
+          zip: input.zip,
+          household_size: input.household_size,
+          income_range: input.income_range,
+          housing_status: input.housing_status,
+          matched_program_ids: matched.map((r) => r.program.id),
+          match_count: matched.length,
+          strong_count: matched.filter((r) => r.confidence === "strong").length,
+          likely_count: matched.filter((r) => r.confidence === "likely").length,
+        });
+        navigator.sendBeacon("/api/screening-event", new Blob([beaconData], { type: "application/json" }));
+      } catch {
+        // silent — analytics are best-effort
+      }
     }
   }
 
@@ -92,6 +131,7 @@ export default function Screener({ citySlug }: { citySlug: string }) {
     if (step > 1) {
       if (step === 4) setResults(null);
       setStep(step - 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }
 
@@ -566,15 +606,32 @@ export default function Screener({ citySlug }: { citySlug: string }) {
             <h2 className="text-2xl font-bold">Your Programs</h2>
             <button
               type="button"
-              onClick={() => window.print()}
+              onClick={() => {
+                trackEvent("print-results");
+                window.print();
+              }}
               className="no-print rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
             >
               Print My Results
             </button>
           </div>
 
+          {results.length > 0 && (
+            <p className="text-sm text-muted no-print">
+              You matched{" "}
+              <strong className="text-gray-900">{results.length} program{results.length === 1 ? "" : "s"}</strong>.
+              {results.filter((r) => r.confidence === "strong").length > 0 &&
+                ` ${results.filter((r) => r.confidence === "strong").length} strong match${results.filter((r) => r.confidence === "strong").length === 1 ? "" : "es"}.`}
+              {" "}Tap each one to see details and how to apply.
+            </p>
+          )}
+
           <ResultsGroup results={results} citySlug={citySlug} />
           <DocumentChecklist results={results} />
+
+          {tenant?.intakeEnabled && (
+            <IntakeForm tenant={tenant} results={results} screeningInputs={input} />
+          )}
 
           <div className="rounded-lg bg-muted-light p-4 text-sm text-muted no-print">
             <p className="font-medium text-gray-700">Need more help?</p>

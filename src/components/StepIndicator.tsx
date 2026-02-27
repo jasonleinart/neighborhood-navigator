@@ -1,6 +1,6 @@
 "use client";
 
-const STEP_LABELS = ["Your Situation", "Your Household", "Your Home", "Results"];
+const STEP_LABELS = ["Situation", "Household", "Home", "Results"];
 
 interface StepIndicatorProps {
   currentStep: number;
@@ -42,7 +42,7 @@ export default function StepIndicator({ currentStep, onStepClick }: StepIndicato
                 >
                   {isCompleted ? "\u2713" : step}
                 </span>
-                <span className="hidden sm:inline">{label}</span>
+                <span className="text-xs sm:text-sm">{label}</span>
               </button>
               {index < STEP_LABELS.length - 1 && (
                 <div

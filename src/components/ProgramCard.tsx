@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { MatchResult } from "@/lib/types";
 import { getCategoryLabel } from "@/lib/utils";
+import { trackEvent } from "@/lib/analytics";
 
 interface ProgramCardProps {
   result: MatchResult;
@@ -17,7 +18,10 @@ export default function ProgramCard({ result, citySlug }: ProgramCardProps) {
     <div className="rounded-lg border border-gray-200 bg-white">
       <button
         type="button"
-        onClick={() => setExpanded(!expanded)}
+        onClick={() => {
+          if (!expanded) trackEvent("program-card-expanded", { programId: program.id });
+          setExpanded(!expanded);
+        }}
         className="w-full px-4 py-4 text-left"
       >
         <div className="flex items-start justify-between gap-3">
@@ -50,7 +54,15 @@ export default function ProgramCard({ result, citySlug }: ProgramCardProps) {
                 ? "Seasonal"
                 : "Waitlist"}
             </span>
-            <span className="text-gray-400">{expanded ? "\u25B2" : "\u25BC"}</span>
+            <svg
+              className={`h-5 w-5 text-gray-400 transition-transform ${expanded ? "rotate-180" : ""}`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
           </div>
         </div>
         <p className="mt-2 text-sm font-medium text-primary-dark">

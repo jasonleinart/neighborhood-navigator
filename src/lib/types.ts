@@ -124,6 +124,29 @@ export interface ResidentInput {
   utility_provider: UtilityProvider;
 }
 
+// Tenant configuration (loaded from src/data/tenants/*.json)
+export interface TenantConfig {
+  slug: string;
+  name: string;
+  shortName: string;
+  city: string;
+  intakeEnabled: boolean;
+  contactPromise: string;
+  managerEmail: string;
+  crm: {
+    type: "zoho" | "sheets" | "none";
+    enabled: boolean;
+  };
+  sheetsFallback: {
+    enabled: boolean;
+    spreadsheetId: string;
+  };
+  webhook?: {
+    url: string;
+    secret?: string;
+  };
+}
+
 // Match confidence
 export type MatchConfidence = "strong" | "likely";
 

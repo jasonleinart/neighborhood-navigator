@@ -56,7 +56,7 @@ export default function HomePage() {
           value={zip}
           onChange={(e) => setZip(e.target.value.replace(/\D/g, ""))}
           placeholder="e.g. 48214"
-          className="rounded-lg border border-gray-300 px-4 py-3 text-center text-lg focus:border-primary focus:ring-2 focus:ring-primary-light focus:outline-none"
+          className="rounded-lg border border-gray-300 px-4 py-4 text-center text-lg focus:border-primary focus:ring-2 focus:ring-primary-light focus:outline-none"
           autoFocus
         />
         {error && (
@@ -72,9 +72,9 @@ export default function HomePage() {
 
       <div className="mt-12 rounded-lg bg-muted-light p-4 text-sm text-muted">
         <p>
-          <strong>Your privacy:</strong> Your answers never leave your device.
-          No data is stored, no accounts are needed, and nothing is sent to a
-          server.
+          <strong>Your privacy:</strong> Your answers stay on your device. No
+          accounts needed. We count page views anonymously to improve the tool
+          — your personal answers are never sent to a server.
         </p>
       </div>
     </div>
