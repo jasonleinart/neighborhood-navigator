@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "WebFetch(domain:thedailyscroll.substack.com)",
+      "Read(//Users/jasonleinart/Workspace/vault/pkm/templates/**)",
+      "Read(//Users/jasonleinart/Workspace/vault/pkm/_indexes/**)",
+      "Read(//Users/jasonleinart/Workspace/vault/pkm/notes/**)",
+      "WebFetch(domain:www.bridgedetroit.com)",
+      "WebFetch(domain:www.zoho.com)",
+      "WebFetch(domain:zenatta.com)",
+      "WebFetch(domain:www.rocketcommunityfund.org)",
+      "WebFetch(domain:outliermedia.org)",
+      "WebFetch(domain:crm-masters.com)",
+      "WebFetch(domain:detroitmi.gov)",
+      "WebFetch(domain:www.michigan.gov)",
+      "WebFetch(domain:help.zoho.com)",
+      "WebFetch(domain:www.edzola.com)",
+      "WebFetch(domain:sites.fordschool.umich.edu)",
+      "Bash(wc:*)",
+      "Bash(ls:*)",
+      "Bash(node -e:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
